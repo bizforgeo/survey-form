@@ -7,9 +7,87 @@
         <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
-        <header></header>
+        <header>
+            <h1 id="title">Survey Form</h1>
+            <p id="description">Thank you for taking this survey</p>
+        </header>
         <main>
-            <h1>Survey Form</h1>
+            <form id="survey-form">
+                <div class="form-group">
+                    <label id="name-label" for="name">
+                        Name
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label id="email-label" for="email">
+                        Email
+                        <input id="email" type="email" name="email" for="email" class="form-control" placeholder="Enter your email" required>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label id="number-label" for="age">
+                        Age (optional)
+                        <input id="number" type="number" name="age" for="age" class="form-control" placeholder="Enter your age" min="13" max="113">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <p>Which number do you prefer?</p>
+                    <select id="dropdown" class="form-control" required>
+                        <option disabled selected value>Select your preferred number</option>
+                        <option value="1">Number 1</option>
+                        <option value="2">Number 2</option>
+                        <option value="3">Number 3</option>
+                        <option value="4">Number 4</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <p>Which color do you prefer?</p>
+                    <label>
+                        Red
+                        <input name="preferred-color" value="red" type="radio" class="input-radio" checked>
+                    </label>
+                    <label>
+                        Green
+                        <input name="preferred-color" value="green" type="radio" class="input-radio">
+                    </label>
+                    <label>
+                        Blue
+                        <input name="preferred-color" value="blue" type="radio" class="input-radio">
+                    </label>
+                    <label>
+                        Other
+                        <input name="preferred-color" value="other" type="radio" class="input-radio">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <p>What foods do you like?</p>
+                    <label>
+                        Pizza
+                        <input name="liked-food" value="pizza" type="checkbox" class="input-checkbox">
+                    </label>
+                    <label>
+                        Potato chips
+                        <input name="liked-food" value="potato-chips" type="checkbox" class="input-checkbox">
+                    </label>
+                    <label>
+                        Salad
+                        <input name="liked-food" value="salad" type="checkbox" class="input-checkbox">
+                    </label>
+                    <label>
+                        Other
+                        <input name="liked-food" value="other" type="checkbox" class="input-checkbox">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <p>Do you have any comments or suggestions to improve this form?</p>
+                    <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your response here..."></textarea>
+                </div>
+                <div class="form-group">
+                    <button id="submit" type="submit" class="submit-button">Submit</button>
+                </div>
+            </form>
         </main>
     </body>
 </html>
